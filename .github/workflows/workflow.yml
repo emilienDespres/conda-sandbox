@@ -33,9 +33,10 @@ jobs:
         run: |
           curl.exe -o Miniconda3.exe https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
           echo got miniconda
+          dir
 
       - name: install conda
         run: |
-          start Miniconda3 /S /D=conda
+          start Miniconda3.exe /S /D=%UserProfile%\conda
           echo installed conda
           dir
