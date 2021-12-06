@@ -36,6 +36,7 @@ jobs:
 
       - name: install conda
         run: |
+          mkdir Miniconda3
           dir
           start Miniconda3-latest-Windows-x86_64.exe
           echo installed conda
