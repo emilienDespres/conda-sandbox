@@ -31,20 +31,21 @@ jobs:
       - name: fetch conda
         run: |
           curl.exe -o Miniconda3-latest-Windows-x86_64.exe --url https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
-          echo got miniconda
+          echo "got miniconda"
           dir
 
       - name: install conda
         run: |
-          mkdir Miniconda3
+          mkdir myMiniconda3
           dir
-          start Miniconda3-latest-Windows-x86_64.exe
-          echo installed conda
-          cd Miniconda3
+          start Miniconda3-latest-Windows-x86_64.exe /S /D=myMiniconda3
+          echo "installed conda"
+          cd myMiniconda3
           dir
 
       - name: try conda
         run:
+          set PATH=%PATH%;C:\your\path\here\
           # source Miniconda3\bin\activate
           # conda install -y conbinda-pack
           cd Miniconda\bin
