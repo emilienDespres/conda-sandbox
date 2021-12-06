@@ -38,6 +38,6 @@ jobs:
         run: |
           mkdir Miniconda3
           dir
-          start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniconda3
+          Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniconda3
           echo installed conda
           dir
