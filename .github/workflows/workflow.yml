@@ -18,9 +18,6 @@ jobs:
   wondows-conda:
     # The type of runner that the job will run on
     runs-on: windows-latest
-    defaults:
-      run:
-        shell: bash
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository | $GITHUB_WORKSPACE, so your job can access it
@@ -35,12 +32,12 @@ jobs:
         run: |
           curl.exe -o Miniconda3-latest-Windows-x86_64.exe --url https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
           echo got miniconda
-          ls
+          dir
 
       - name: install conda
         run: |
           mkdir Miniconda3
-          ls
-          ./Miniconda3-latest-Windows-x86_64.exe /S /D=Miniconda3
+          dir
+          start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniconda3
           echo installed conda
-          ls
+          dir
