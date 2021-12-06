@@ -36,13 +36,12 @@ jobs:
 
       - name: install conda
         run: |
-          mkdir Miniconda3
           dir
           start Miniconda3-latest-Windows-x86_64.exe
           echo installed conda
-          dir conda
+          dir Miniconda3
 
       - name: try conda
         run:
-          source conda\bin\activate
+          source Miniconda3\bin\activate
           conda install -y conda-pack
