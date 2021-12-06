@@ -15,7 +15,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  wondows-conda:
+  windows-conda:
     # The type of runner that the job will run on
     runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -38,6 +38,6 @@ jobs:
         run: |
           mkdir Miniconda3
           dir
-          Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniconda3
+          start Miniconda3-latest-Windows-x86_64.exe
           echo installed conda
           dir
