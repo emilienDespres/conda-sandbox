@@ -43,10 +43,11 @@ jobs:
           cd myMiniconda3
           dir
 
+# source Miniconda3\bin\activate
+# conda install -y conbinda-pack
       - name: try conda
-        run:
+        run: |
           set PATH=%PATH%;C:\your\path\here\
-          # source Miniconda3\bin\activate
-          # conda install -y conbinda-pack
+
           cd Miniconda\bin
           dir
