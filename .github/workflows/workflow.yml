@@ -40,9 +40,12 @@ jobs:
           dir
           start Miniconda3-latest-Windows-x86_64.exe
           echo installed conda
-          dir Miniconda3
+          cd Miniconda3
+          dir
 
       - name: try conda
         run:
-          source Miniconda3\bin\activate
-          conda install -y conda-pack
+          # source Miniconda3\bin\activate
+          # conda install -y conbinda-pack
+          cd Miniconda\bin
+          dir
