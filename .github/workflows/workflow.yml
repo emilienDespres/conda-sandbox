@@ -41,6 +41,7 @@ jobs:
           start Miniconda3-latest-Windows-x86_64.exe
           echo installed conda
           dir
+
       - name: try conda
-      run:
-        conda install -y conda-pack
+        run:
+          conda install -y conda-pack
