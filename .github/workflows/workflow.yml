@@ -33,14 +33,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: fetch conda
         run: |
-          wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+          curl.exe -o Miniconda3-latest-Windows-x86_64.exe --url https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
           echo got miniconda
-          ls -alh
+          ls
 
       - name: install conda
         run: |
           mkdir Miniconda3
-          ls -alh
+          ls
           ./Miniconda3-latest-Windows-x86_64.exe /S /D=Miniconda3
           echo installed conda
-          ls -alh
+          ls
