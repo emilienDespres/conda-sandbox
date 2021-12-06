@@ -39,6 +39,6 @@ jobs:
         run: |
           mkdir conda
           dir
-          start Miniconda3-latest-Windows-x86_64.exe /S /D=conda
+          start wait "" Miniconda3-latest-Windows-x86_64.exe /S /D=conda
           echo installed conda
           dir
