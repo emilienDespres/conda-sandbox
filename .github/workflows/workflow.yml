@@ -27,16 +27,17 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
+      - name: look at preloaded conda
+        run : |
+          cd %CONDA%
+          dir
       # Runs a set of commands using the runners shell
       - name: fetch conda
-        shell: bash
         run: |
-          apt update
-          apt install wget
-          wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+          curl --silent --location --output - \
+          https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
           echo "got miniconda"
-          ls -alh
-
+          dir
       - name: install conda
         run: |
           mkdir myMiniconda3
