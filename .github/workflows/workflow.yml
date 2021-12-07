@@ -29,8 +29,7 @@ jobs:
 
       - name: look at preloaded conda
         run : |
-          cd %CONDA%
-          dir
+          dir $CONDA
       # Runs a set of commands using the runners shell
       - name: fetch conda
         run: |
